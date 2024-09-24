@@ -1,0 +1,10 @@
+services:
+  coredns:
+    command: "-conf /etc/coredns/Corefile"
+    image: coredns/coredns:latest
+    container_name: coredns
+    network_mode: host
+    volumes:
+      - ./Corefile:/etc/coredns/Corefile
+      - ./zones:/zones
+    restart: always

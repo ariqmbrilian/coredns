@@ -1,0 +1,12 @@
+.:53 {
+    forward . 1.1.1.1 8.8.8.8
+    log
+    errors
+    health
+}
+
+andal.com:53 {
+    file /zones/domain.com.db
+    log
+    errors
+}
